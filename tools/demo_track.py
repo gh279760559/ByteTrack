@@ -28,13 +28,15 @@ def make_parser():
 
     parser.add_argument(
         #"--path", default="./datasets/mot/train/MOT17-05-FRCNN/img1", help="path to images or video"
-        "--path", default="./videos/palace.mp4", help="path to images or video"
+        ### video test
+        # "--path", default="/home/hao/PycharmProjects/ByteTrack/videos/palace.mp4", help="path to images or video"
+        "--path", default="/home/hao/PycharmProjects/ByteTrack/images", help="path to images or video"
     )
     parser.add_argument("--camid", type=int, default=0, help="webcam demo camera id")
     parser.add_argument(
         "--save_result",
         action="store_true",
-        help="whether to save the inference result of image/video",
+        help="whether to save the inference result of /home/hao/PycharmProjects/ByteTrack/YOLOX_outputs",
     )
 
     # exp file
@@ -48,7 +50,7 @@ def make_parser():
     parser.add_argument("-c", "--ckpt", default=None, type=str, help="ckpt for eval")
     parser.add_argument(
         "--device",
-        default="gpu",
+        default="cpu",
         type=str,
         help="device to run our model, can either be cpu or gpu",
     )
